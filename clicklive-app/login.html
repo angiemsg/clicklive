@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CLICKLIVE</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="login">
+
+    <div class="container app">
+
+        <!-- BLOQUE SUPERIOR -->
+        <div class="login-top">
+            <img src="img/logo-cl.png" class="logo-login">
+            <img src="img/icons/frase.png" class="frase-login">
+        </div>
+
+        <!-- BLOQUE FORMULARIO -->
+        <div class="login-form">
+
+           <input type="email" id="email" placeholder="Correo electrónico" class="input-login">
+
+            <input type="password" id="password" placeholder="Contraseña" class="input-login">
+
+            <button onclick="login()" class="btn-login">
+                Iniciar sesión
+            </button>
+
+            <p class="texto-login">
+                ¿Olvidaste tu usuario o contraseña?
+            </p>
+
+            <p class="crear-cuenta">
+                ¿No tienes cuenta?
+                <a href="registro.html">Crear cuenta</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+    <!-- Configuración general -->
+    <script src="js/config.js"></script>
+    
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

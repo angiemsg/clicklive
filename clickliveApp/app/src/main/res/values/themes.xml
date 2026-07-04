@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base -->
+    <style name="Base.Theme.ClickliveApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- 🔥 FONDO NEGRO GLOBAL -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+
+    </style>
+
+    <!-- Tema principal -->
+    <style name="Theme.ClickliveApp" parent="Base.Theme.ClickliveApp" />
+
+</resources>

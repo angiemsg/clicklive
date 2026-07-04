@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc de Notas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="notas">
+
+<button class="btn-back" onclick="goBack()">‹</button>
+
+<div class="container app">
+
+    <!-- HEADER -->
+    <div class="menu-header">
+        <p class="titulo-header">
+            Bloc de Notas
+            <img src="img/icons/blocknotas.png" class="icon-header">
+        </p>
+    </div>
+
+    <!-- BOTÓN + -->
+    <div class="zona-agregar">
+        <img src="img/icons/masnotas.png" id="btnAgregar" class="btn-mas">
+    </div>
+
+    <!-- CONTENEDOR -->
+    <div id="contenedorNotas" class="zona-notas">
+
+        <p id="estadoVacio" class="estado-vacio">
+            Aún no hay notas
+        </p>
+
+    </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-box">
+        <h3>Nueva Nota</h3>
+        <textarea id="textoNota" placeholder="Escribe tu nota..."></textarea>
+        <button id="btnGuardar">Guardar</button>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href = "dashboard.html";
+        }
+    }
+</script>
+
+<script src="js/config.js"></script>
+
+<script src="js/app.js?v=11"></script>
+
+</body>
+</html>

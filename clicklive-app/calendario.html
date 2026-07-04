@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - CLICKLIVE</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/calendario.css">
+</head>
+
+<body class="calendario calendario-fase1">
+
+<button class="btn-back" onclick="goBack()">
+    &#8249;
+</button>
+
+<div class="container app">
+
+    <main class="cal-app">
+
+        <header class="cal-header">
+            <div>
+                <p class="cal-eyebrow">
+                    Gestión de Contenidos
+                    <img src="img/icons/gestioncontenidos.png" class="icon-header">
+                </p>
+
+                <h1 style="display:none;"></h1>
+
+            </div>
+
+            <button type="button" id="btnNuevaActividad" class="cal-btn-icon" aria-label="Nueva actividad">
+                +
+            </button>
+        </header>
+
+        <section class="cal-toolbar">
+            <button type="button" id="btnMesAnterior" class="cal-nav" aria-label="Mes anterior">
+                &#8249;
+            </button>
+
+            <div class="cal-mes" id="tituloMes"></div>
+
+            <button type="button" id="btnMesSiguiente" class="cal-nav" aria-label="Mes siguiente">
+                &#8250;
+            </button>
+        </section>
+
+        <section class="cal-weekdays" aria-hidden="true">
+            <span>Dom</span>
+            <span>Lun</span>
+            <span>Mar</span>
+            <span>Mie</span>
+            <span>Jue</span>
+            <span>Vie</span>
+            <span>Sab</span>
+        </section>
+
+        <section id="calGrid" class="cal-grid"></section>
+
+        <section class="cal-agenda">
+            <div class="cal-agenda-head">
+                <h2 id="tituloAgenda">Hoy</h2>
+                <span id="contadorEventos">0</span>
+            </div>
+
+            <div id="listaEventosDia" class="cal-event-list"></div>
+        </section>
+
+    </main>
+
+</div>
+
+<div id="modalEvento" class="cal-modal" aria-hidden="true">
+    <div class="cal-modal-box">
+
+        <div class="cal-modal-head">
+            <h2 id="tituloModal">Nueva actividad</h2>
+            <button type="button" id="btnCerrarModal" class="cal-close" aria-label="Cerrar">
+                &times;
+            </button>
+        </div>
+
+        <form id="formEvento" class="cal-form">
+            <input type="hidden" id="eventoId">
+
+            <label>
+                <span>Titulo</span>
+                <input type="text" id="eventoTitulo" required>
+            </label>
+
+            <label>
+                <span>Descripcion</span>
+                <textarea id="eventoDescripcion" rows="3"></textarea>
+            </label>
+
+            <div class="cal-form-row">
+                <label>
+                    <span>Fecha</span>
+                    <input type="date" id="eventoFecha" required>
+                </label>
+
+                <label>
+                    <span>Hora</span>
+                    <input type="time" id="eventoHora">
+                </label>
+            </div>
+
+            <div class="cal-form-row">
+                <label>
+                    <span>Tipo</span>
+                    <select id="eventoTipo">
+                        <option>Publicacion</option>
+                        <option>Grabacion</option>
+                        <option>Edicion</option>
+                        <option>Reunion</option>
+                        <option>Idea</option>
+                        <option>Tarea personal</option>
+                        <option>Otro</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Estado</span>
+                    <select id="eventoEstado">
+                        <option>Pendiente</option>
+                        <option>En proceso</option>
+                        <option>Completado</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="cal-form-row">
+                <label>
+                    <span>Prioridad</span>
+                    <select id="eventoPrioridad">
+                        <option>Media</option>
+                        <option>Alta</option>
+                        <option>Baja</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Recordatorio</span>
+                    <select id="eventoRecordatorio">
+                        <option>Sin recordatorio</option>
+                        <option>15 minutos</option>
+                        <option>30 minutos</option>
+                        <option>1 hora</option>
+                        <option>1 dia</option>
+                    </select>
+                </label>
+            </div>
+
+            <section class="cal-picker">
+                <div class="cal-picker-head">
+                    <h3>Notas</h3>
+                    <span id="totalNotas">0</span>
+                </div>
+                <div id="listaNotas" class="cal-check-list"></div>
+            </section>
+
+            <section class="cal-picker">
+                <div class="cal-picker-head">
+                    <h3>Archivos</h3>
+                    <span id="totalArchivos">0</span>
+                </div>
+                <div id="listaArchivos" class="cal-check-list"></div>
+            </section>
+
+            <div class="cal-actions">
+                <button type="button" id="btnEliminarEvento" class="cal-btn-danger">
+                    Eliminar
+                </button>
+                <button type="submit" class="cal-btn-primary">
+                    Guardar
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div id="toastCalendario" class="cal-toast"></div>
+
+<script>
+    function goBack() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href = "dashboard.html";
+        }
+    }
+
+</script>
+
+<script src="js/config.js"></script>
+
+<script src="js/calendario.js"></script>
+
+</body>
+
+</html>

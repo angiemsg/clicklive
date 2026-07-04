@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - CLICKLIVE</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="registro">
+
+    <!--  BOTÓN BACK GLOBAL -->
+    <button class="btn-back" onclick="goBack()">
+        &#8249;
+    </button>
+
+    <div class="container app">
+
+        <!-- BLOQUE SUPERIOR -->
+        <div class="login-top">
+            <img src="img/logo-cl.png" class="logo-login">
+
+            <p class="texto-registro">
+                Crea tu cuenta y empieza a gestionar tu contenido fácilmente
+            </p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="login-form">
+
+            <input type="email" id="email" placeholder="Correo electrónico" class="input-login">
+
+            <input type="password" id="password" placeholder="Contraseña" class="input-login">
+
+            <input type="password" id="confirmar" placeholder="Confirmar Contraseña" class="input-login">
+
+            <!-- CHECK -->
+            <label class="check-container">
+                <input type="checkbox" id="terminos">
+                <span>Acepto términos y condiciones</span>
+            </label>
+
+            <button class="btn-login" onclick="registro()">
+                Crear Cuenta
+            </button>
+
+            <p class="crear-cuenta">
+                ¿Ya tienes cuenta?
+                <a href="login.html">Inicia sesión aquí</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <!--  SCRIPT BACK -->
+    <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

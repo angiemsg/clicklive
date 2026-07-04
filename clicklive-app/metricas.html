@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Métricas</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<!--  BOTÓN BACK GLOBAL -->
+<button class="btn-back" onclick="goBack()">
+    &#8249;
+</button>
+
+<div class="container app">
+
+  <!-- HEADER -->
+  <div class="menu-header">
+    <p class="titulo-header">
+      Gestión de Métricas
+      <img src="img/icons/gestionmetricas.png" class="icon-header">
+    </p>
+  </div>
+
+  <!-- LOGO INSTAGRAM -->
+  <img src="img/icons/letrainstagram.png" class="logo-instagram">
+
+  <!-- FILA VERDE -->
+  <div class="fila-superior">
+    <span>Estadísticas</span>
+    <span>01 de oct. - 01 de nov.</span>
+  </div>
+
+  <!-- MÉTRICAS -->
+  <div class="metricas">
+
+    <div class="item">
+      <span>Visualizaciones</span>
+      <span>21.5 mil ></span>
+    </div>
+
+    <div class="item">
+      <span>Interacciones</span>
+      <span>363 ></span>
+    </div>
+
+    <div class="item">
+      <span>Nuevos Seguidores</span>
+      <span>54 ></span>
+    </div>
+
+    <div class="item">
+      <span>Contenido que Compartiste</span>
+      <span>16 ></span>
+    </div>
+
+  </div>
+
+  <!-- REDES -->
+  <div class="redes">
+    <img src="img/icons/instagram.png" onclick="mensajeRed('Instagram')">
+    <img src="img/icons/tiktok.png" onclick="mensajeRed('TikTok')">
+    <img src="img/icons/facebook.png" onclick="mensajeRed('Facebook')">
+    <img src="img/icons/threads.png" onclick="mensajeRed('Threads')">
+    <img src="img/icons/youtube.png" onclick="mensajeRed('YouTube')">
+    <img src="img/icons/x.png" onclick="mensajeRed('X')">
+  </div>
+
+  <!-- TEXTO -->
+  <div class="texto-redes">
+    Selecciona la métrica requerida
+  </div>
+
+</div>
+
+<!--  TOAST -->
+<div id="toast"></div>
+
+<!--  SCRIPT BACK -->
+<script>
+function goBack() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "dashboard.html";
+    }
+}
+</script>
+
+<script src="js/config.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CLICKLIVE</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="dashboard">
+
+    <div class="container app">
+
+        <div class="dashboard-contenido">
+
+            <!-- TOP (FIJO ARRIBA)-->
+            <div class="top">
+
+                <div class="header">
+                    <div class="foto-container">
+                        <img src="img/icons/subirnube.png" alt="Usuario">
+                    </div>
+
+                    <p class="usuario-dashboard">
+                        cerveraofficial
+                    </p>
+                </div>
+
+                <div class="panel" onclick="window.location.href='perfil.html'">
+                    Panel de Cuentas
+                </div>
+
+            </div>
+
+            <!--  MIDDLE (CENTRO FLEXIBLE)-->
+            <div class="middle">
+
+                <div class="grid">
+
+                    <!-- FILA 1 -->
+                    <div class="opcion" onclick="window.location.href='menu.html'">
+                        <img src="img/icons/menu.png" alt="Menu">
+                        <p>Menu</p>
+                    </div>
+
+                    <div class="opcion" onclick="window.location.href='calendario.html'">
+                        <img src="img/icons/calendario.png" alt="Calendario">
+                        <p>Calendario</p>
+                    </div>
+
+                    <!-- FILA 2 -->
+                    <div class="opcion" onclick="window.location.href='blocknotas.html'">
+                        <img src="img/icons/notas.png" alt="Notas">
+                        <p>Notas</p>
+                    </div>
+
+                    <div class="opcion" onclick="window.location.href='metricas.html'">
+                        <img src="img/icons/metricas.png" alt="Metricas">
+                        <p>Métricas</p>
+                    </div>
+
+                    <!-- FILA 3 -->
+                    <div class="opcion" onclick="window.location.href='archivos.html'">
+                        <img src="img/icons/descargas.png" alt="Descargas">
+                        <p>Descargas</p>
+                    </div>
+
+                    <div class="opcion ia" onclick="window.location.href='IAcreativa.html'">
+                        <img src="img/icons/iacreativa.png" alt="IA">
+                        <p>IA Creativa</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM (OPCIONAL FUTURO)-->
+            <div class="bottom"></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA Creativa</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CONTENEDOR TIPO APP */
+.pantalla {
+  width: 320px;
+  height: 600px;
+  background: black;
+  position: relative;
+  border-radius: 30px;
+}
+
+/* MENSAJE */
+.mensaje {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BOTÓN BACK GLOBAL -->
+<button class="btn-back" onclick="goBack()">
+    &#8249;
+</button>
+
+<div class="pantalla">
+
+  <div class="mensaje">
+    <h2>🚧 IA Creativa</h2>
+    <p>En construcción</p>
+    <p>Disponible en Fase 2 🚀</p>
+  </div>
+
+</div>
+
+<!--  SCRIPT BACK -->
+<script>
+function goBack() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "dashboard.html";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clicklive</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="splash">
+
+<div class="container app">
+
+    <!-- BLOQUE ÚNICO -->
+    <div class="splash-content">
+
+        <p class="bienvenido">Bienvenido</p>
+
+        <!-- LOGO -->
+        <img src="img/logo-cl.png" class="logo" onclick="irLogin()">
+
+        <!-- LETRERO CLICKLIVE -->
+        <img src="img/letrero-cl.png" class="titulo-img">
+
+        <!-- FRASE  -->
+        <img src="img/icons/frase.png" class="frase-img">
+
+    </div>
+
+</div>
+
+<script>
+    function irLogin() {
+        window.location.href = "login.html";
+    }
+
+    // AUTO ARRANQUE CONTROLADO
+    window.addEventListener("load", function() {
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 2000);
+    });
+</script>
+
+</body>
+</html>

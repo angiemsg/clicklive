@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - CLICKLIVE</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="menu">
+
+<!--  BOTÓN BACK GLOBAL -->
+<button class="btn-back" onclick="goBack()">
+    &#8249;
+</button>
+
+<div class="container app">
+
+    <div class="menu-contenido">
+
+        <!-- HEADER -->
+        <div class="menu-header">
+            <p class="titulo-header">Menú</p>
+        </div>
+
+        <!-- LISTA -->
+        <div class="menu-list">
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Cambiar idioma</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Acceso compartido</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Privacidad de la cuenta</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Contenido programado</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Permisos redes sociales</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Conexión a aplicaciones externas</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Conexión APIs externas</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Estadísticas de crecimiento global</span>
+                <span>›</span>
+            </div>
+
+            <div class="menu-item" onclick="fase2()">
+                <span>Información</span>
+                <span>›</span>
+            </div>
+
+        </div>
+
+        <!-- LOGOUT -->
+        <div class="logout-btn" onclick="cerrarSesion()">
+            CERRAR SESIÓN
+        </div>
+
+    </div>
+
+</div>
+
+<!--  TOAST (SIEMPRE AL FINAL DEL BODY) -->
+<div id="toast" class="toast">
+    Funcionalidad disponible próximamente
+</div>
+
+<!-- SCRIPT -->
+<script>
+    function goBack() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href = "dashboard.html";
+        }
+    }
+
+    function cerrarSesion() {
+        localStorage.removeItem("sesionActiva");
+        window.location.href = "login.html";
+    }
+
+    function fase2() {
+        const toast = document.getElementById("toast");
+
+        //  fuerza repaint por si WebView es lento
+        toast.style.display = "block";
+        toast.classList.add("show");
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>

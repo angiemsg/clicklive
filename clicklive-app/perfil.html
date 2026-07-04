@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - CLICKLIVE</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="perfil">
+
+    <!-- BOTÓN ATRÁS -->
+    <button class="btn-back" onclick="goBack()">
+        &#8249;
+    </button>
+
+    <div class="container app">
+
+        <div class="perfil-content">
+
+            <!-- BLOQUE SUPERIOR-->
+
+            <div class="bloque-superior">
+
+                <!-- FOTO -->
+                <label class="foto-perfil" for="inputFoto">
+
+                    <input
+                        id="inputFoto"
+                        type="file"
+                        accept="image/*">
+                    <img
+                        id="preview"
+                        src="img/icons/subirnube.png"
+                        alt="Foto perfil">
+
+                    <span>Agregar foto</span>
+
+                </label>
+
+                <!-- NOMBRE -->
+
+                <p
+                    id="nombreUsuarioTexto"
+                    class="nombre-usuario">
+
+                    cerveraofficial
+
+                </p>
+
+                <input
+                    type="text"
+                    id="nombreUsuarioInput"
+                    class="input-login"
+                    placeholder="Nuevo nombre"
+                    style="display:none;">
+
+                <button
+                    type="button"
+                    class="btn-editar"
+                    onclick="editarNombre()">
+
+                    Editar nombre
+
+                </button>
+
+                <p class="texto-perfil">
+                    Conecta con tus cuentas para analizar y gestionar contenido
+                </p>
+
+                <img
+                    src="img/letrero-cl.png"
+                    class="letrero-cl"
+                    alt="CLICKLIVE">
+
+            </div>
+
+            <!-- REDES-->
+
+            <div class="redes-grid">
+
+                <div class="red-item" data-red="instagram">
+
+                    <img src="img/icons/instagram.png" alt="Instagram">
+
+                    <input
+                        id="instagram"
+                        class="input-red"
+                        type="hidden">
+
+                </div>
+
+                <div class="red-item" data-red="tiktok">
+
+                    <img src="img/icons/tiktok.png" alt="TikTok">
+
+                    <input
+                        id="tiktok"
+                        class="input-red"
+                        type="hidden">
+
+                </div>
+
+                <div class="red-item" data-red="facebook">
+
+                    <img src="img/icons/facebook.png" alt="Facebook">
+
+                    <input
+                        id="facebook"
+                        class="input-red"
+                        type="hidden">
+
+                </div>
+
+                <div class="red-item" data-red="youtube">
+
+                    <img src="img/icons/youtube.png" alt="YouTube">
+
+                    <input
+                        id="youtube"
+                        class="input-red"
+                        type="hidden">
+
+                </div>
+
+                <div class="red-item" data-red="threads">
+
+                    <img src="img/icons/threads.png" alt="Threads">
+
+                    <input
+                        id="threads"
+                        class="input-red"
+                        type="hidden">
+
+                </div>
+
+                <div class="red-item" data-red="x">
+
+                    <img src="img/icons/x.png" alt="X">
+
+                    <input
+                        id="x"
+                        class="input-red"
+                        type="hidden">
+
+                </div>
+
+            </div>
+
+            <p class="texto-pequeno">
+                Tus datos se usarán únicamente para conectar tus redes y mostrar estadísticas en ClickLive.
+            </p>
+
+            <button
+                type="button"
+                class="btn-guardar"
+                onclick="guardarPerfil()">
+
+                Guardar
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <script>
+
+        function goBack(){
+
+            if(window.history.length>1){
+
+                window.history.back();
+
+            }else{
+
+                window.location.href="dashboard.html";
+
+            }
+
+        }
+
+    </script>
+
+    <script src="js/config.js"></script>
+    
+    <script src="js/perfil.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Archivos - CLICKLIVE</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="archivos">
+
+<button class="btn-back" onclick="goBack()">
+    ‹
+</button>
+
+<div class="container app">
+
+    <div class="archivos-contenido">
+
+        <!-- VISOR DE IMAGEN -->
+        <div id="visorImagen" class="visor-imagen">
+
+            <button id="cerrarVisor" class="btn-back">
+                &#8249;
+            </button>
+
+            <img id="imagenGrande">
+
+            <video
+                    id="videoGrande"
+                    controls
+                    style="display:none;"
+            ></video>
+
+        </div>
+
+        <div class="top-fijo">
+
+            <div class="menu-header">
+                <div class="titulo-archivos">
+                    <span>Gestión de Archivos</span>
+                    <img src="img/icons/gestordescargas.png" class="icon-header">
+                </div>
+            </div>
+
+            <div class="acciones-archivos">
+
+                <div class="accion" onclick="abrirSelectorArchivo()">
+                    <img src="img/icons/descargas.png">
+                    <p>Desde el dispositivo</p>
+                </div>
+
+                <div class="accion" onclick="mostrarFase2('Desde la nube')">
+                    <img src="img/icons/bajarNube.png">
+                    <p>Desde la nube</p>
+                </div>
+
+                <div class="accion" onclick="mostrarFase2('Subir a la nube')">
+                    <img src="img/icons/subirnube.png">
+                    <p>Subir a la nube</p>
+                </div>
+
+            </div>
+
+            <input
+                    type="file"
+                    id="inputArchivo"
+                    multiple
+                    accept="image/*,video/*"
+                    hidden
+            >
+
+            <div class="buscador">
+                <input
+                        type="text"
+                        id="inputBuscar"
+                        placeholder="Buscar archivos..."
+                >
+            </div>
+
+        </div>
+
+        <div class="zona-scroll">
+
+            <p id="emptyState" class="empty-state">
+                Aún no hay archivos
+            </p>
+
+            <div id="contenedorArchivos" class="grid-archivos"></div>
+
+        </div>
+
+        <div class="separador"></div>
+
+        <div class="bottom-fijo">
+
+            <p class="texto-apps">
+                Edita tus audios, fotos y videos <br>
+                en tus aplicaciones favoritas
+            </p>
+
+            <div class="apps">
+
+                <div class="app-item" onclick="mostrarFase2('CapCut')">
+                    <img src="img/icons/capcut.png">
+                    <p>CapCut</p>
+                </div>
+
+                <div class="app-item" onclick="mostrarFase2('Snapseed')">
+                    <img src="img/icons/snapseed.png">
+                    <p>Snapseed</p>
+                </div>
+
+                <div class="app-item" onclick="mostrarFase2('Ringtone')">
+                    <img src="img/icons/ringtone.png">
+                    <p>Ringtone</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script>
+    function goBack() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href = "dashboard.html";
+        }
+    }
+</script>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

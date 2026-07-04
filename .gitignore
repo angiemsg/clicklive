@@ -1,0 +1,20 @@
+# Node.js
+**/node_modules/
+
+# Carpeta de archivos subidos
+clicklive-backend/uploads/
+
+# Visual Studio Code
+.vscode/
+
+# Android Studio / IntelliJ
+**/.idea/
+**/build/
+
+# Archivos temporales
+*.log
+.env
+
+# Sistema
+.DS_Store
+Thumbs.db
